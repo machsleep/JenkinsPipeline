@@ -1,11 +1,8 @@
 #!groovy
 node {
+	
 	stage('Build') { // <2>
-		parallel linuxBuild: {
-			echo "Building linux";
-		},
-			echo "Building windows";
-		}, failFast: true;
+		sh './external.groovy';
 	}
 	stage {
 		echo "Testing...";
