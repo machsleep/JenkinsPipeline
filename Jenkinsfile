@@ -9,10 +9,10 @@ node {
 		def example = load "${rootDir}/externalstuff.groovy";
 		
 	}
-	stage {
+	stage('Testing') {
 		echo "Testing...";
 	}
-	stage {
+	stage('Deploying') {
 		echo "Deploying...";
 		emailext body: 'Some information regarding the email.', recipientProviders: [[$class: 'DevelopersRecipientProvider']], subject: 'Hi You\'ve Stated the Pipeline', to: 'machsleep@gmail.com'
 	}
