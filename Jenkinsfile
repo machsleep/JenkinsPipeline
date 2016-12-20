@@ -2,7 +2,7 @@
 node {
 	
 	stage('Build') { // <2>
-		./externalstuff.groovy;
+		sh 'groovy externalstuff.groovy';
 	}
 	stage {
 		echo "Testing...";
