@@ -4,6 +4,7 @@ node {
 	stage('Build') { // <2>
 		def rootDir = pwd();
     		echo "Root dir...";
+		checkout scm;
 		sh 'ls -lart';
 		def example = load "${rootDir}@externalstuff.groovy";
 		
