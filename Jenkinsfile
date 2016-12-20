@@ -6,7 +6,7 @@ node {
     		echo "Root dir...";
 		checkout scm;
 		sh 'ls -lart';
-		def example = load "${rootDir}@externalstuff.groovy";
+		def example = load "${rootDir}/externalstuff.groovy";
 		
 	}
 	stage {
