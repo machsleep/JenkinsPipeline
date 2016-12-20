@@ -2,7 +2,10 @@
 node {
 	
 	stage('Build') { // <2>
-		sh 'groovy externalstuff.groovy';
+		def rootDir = pwd();
+    		echo "Root dir...";
+		def example = load "${rootDir}@externalstuff.groovy";
+		
 	}
 	stage {
 		echo "Testing...";
